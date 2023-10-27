@@ -1,0 +1,430 @@
+.card-area{
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    position: relative;
+}
+.cardM{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+}
+
+.card-4{
+    // background-color: #1abc9c;
+    top: -webkit-calc(35% - 50px);
+    left: -webkit-calc(20% - 50px);
+}
+
+.card-3{
+    // background-color: #3498db;
+    top: -webkit-calc(35% - 90px);
+    left: -webkit-calc(20% - 10px);
+}
+.card-2{
+    // background-color: #9b59b6;
+    top: -webkit-calc(35% - 130px);
+    left: -webkit-calc(20% + 30px);
+}
+.card-1{
+    // background-color: #34495e;
+    top: -webkit-calc(35% - 160px);
+    left: -webkit-calc(20% + 70px);
+}
+
+
+.carousel {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+    
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFDAF5;
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+  
+  .card.active {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .button{
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+    font-size: larger;
+    color: #FF0241;
+    font-weight: bolder;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .button-1 {
+    left: -50px;
+  }
+  
+  .button-2 {
+    left: 480px;
+  }
+  .button:hover{
+    cursor: pointer;
+    border: 3px solid blue;
+  }
+
+  .card-content{
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+
+  .content-left{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    position: relative;
+  }
+  .content-left>h3{
+    width: 75%;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+    // font-size: 40px;
+    font-size: clamp(10px, 2vw, 40px);
+  }
+  .number-div{
+    position: absolute;
+    background-color: #D29100;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 10px;
+    top: 10px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+.content-right{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+.content-right>p{
+    text-align: center;
+    line-height: 1.8;
+    font-size: 18px;
+}
+.content-right>p::first-letter {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+
+.image-div{
+    width: 450px;
+    height: 450px;
+    z-index: 100;
+    position: absolute;
+    right: 10px;
+    top: 60px;
+}
+
+.image-div > img{
+  width: 100%;
+  height: 100%;
+}
+
+
+/*-------------------------------
+      Media Quarries start
+--------------------------------*/
+
+@media only screen and (max-width: 1199px){
+  .carousel {
+    width: 300px;
+    height: 300px;
+  }
+  .content-right>p{
+    font-size: 14px;
+  }
+  .content-right{
+    margin-top: 10px; 
+  }
+
+  .number-div{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.button-1 {
+    left: -50px;
+  }
+  
+  .button-2 {
+    left: 310px;
+  }
+
+  .image-div{
+    width: 350px;
+    height: 350px;
+    right: 30px;
+    top: 50px;
+}
+
+}
+
+@media only screen and (max-width: 991px){
+  .carousel {
+    width: 300px;
+    height: 300px;
+  }
+  .content-right>p{
+    font-size: 14px;
+  }
+  .content-right{
+    margin-top: 20px; 
+  }
+
+  .number-div{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
+
+.button-1 {
+    left: -50px;
+  }
+  
+  .button-2 {
+    left: 310px;
+  }
+
+  .image-div{
+    width: 350px;
+    height: 350px;
+    right: -130px;
+    top: 50px;
+}
+}
+
+
+@media only screen and (max-width: 767px){
+  .carousel {
+    width: 250px;
+    height: 250px;
+  }
+  .content-right>p{
+    font-size: 12px;
+  }
+  .content-right{
+    margin-top: 25px; 
+  }
+
+  .number-div{
+    width: 40px;
+    height: 40px;
+    margin-left: 1px;
+}
+
+.button-1 {
+    left: -50px;
+  }
+  
+  .button-2 {
+    left: 280px;
+  }
+
+  .image-div{
+    width: 300px;
+    height: 300px;
+    right: -130px;
+    top: 50px;
+}
+  
+}
+
+@media only screen and (max-width: 576px){
+  .carousel {
+    width: 200px;
+    height: 200px;
+  }
+  .content-right>p{
+    font-size: 8px;
+  }
+  .content-right{
+    margin-top: 25px; 
+  }
+
+  .number-div{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.button-1 {
+    display: none;
+  }
+  
+  .button-2 {
+    display: none;
+  }
+
+  
+
+.cardM{
+  position: relative;
+  top: 290px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-top: 5px;
+}
+.card-area{
+  flex-direction: column;
+  align-items: center;
+  height: 110vh;
+}
+.card{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.carousel{
+  margin-right: 15px;
+  margin-left: 5px;
+  width: 100%;
+  height: 250px;
+}
+
+.content-right>p{
+  padding: 10px;
+  font-size: 14px;
+}
+
+.content-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.content-left>h3{
+  font-weight: 900;
+  font-size: 20px;
+}
+.number-div{
+  width: 40px;
+  height: 40px;
+  margin-left: 1px;
+}
+
+
+.image-div{
+  width: 300px;
+  height: 300px;
+  top: -1vh;
+  right: 20vw;
+}
+
+}
+
+
+@media only screen and (max-width: 470px){
+  .content-left>h3{
+    font-size: 16px;
+  }
+  .number-div{
+    width: 30px;
+    height: 30px;
+    margin-left: 1px;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .content-right>p{
+    font-size: 13px;
+  }
+  }
+
+@media only screen and (max-width: 400px){
+    .content-left>h3{
+      font-size: 13px;
+    }
+    .cardM{
+      top:310px;
+    }
+    .number-div{
+      font-size: 10px;
+      width: 25px;
+      height: 25px;
+      margin-left: 1px;
+      top: 0;
+    }
+    .image-div{
+      top: 0vh;
+      right: 15vw;
+    }
+
+    .content-right>p{
+      padding: 10px;
+      font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 335px){
+  .content-left>h3{
+    font-size: 11px;
+  }
+
+  .number-div{
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    margin-left: 1px;
+    top: 0;
+  }
+
+  .content-right>p{
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .image-div{
+    width: 200px;
+    height: 200px;
+    top: 0vh;
+    right: 20vw;
+  }
+  .cardM{
+    top:230px;
+  }
+}
+
+
+
+
